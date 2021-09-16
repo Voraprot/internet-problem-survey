@@ -19,6 +19,7 @@
                     altText: "Flex Message from Share Target Picker",
                     contents: {
                         "type": "bubble",
+                        "size": "giga",
                         "direction": "ltr",
                         "hero": {
                             "type": "image",
@@ -34,11 +35,9 @@
                                 "uri": "https://docs.google.com/forms/d/e/1FAIpQLScR9bNfq1d811MdNlfDUiAuu2ylOLa0S4L0vCEl7pFL-w9MzA/alreadyresponded"
                             }
                         },
-                        "footer": {
+                        "body": {
                             "type": "box",
                             "layout": "horizontal",
-                            "backgroundColor": "#006664",
-                            "borderColor": "#006664",
                             "contents": [
                                 {
                                     "type": "button",
@@ -48,6 +47,7 @@
                                         "uri": "https://docs.google.com/forms/d/e/1FAIpQLScR9bNfq1d811MdNlfDUiAuu2ylOLa0S4L0vCEl7pFL-w9MzA/alreadyresponded"
                                     },
                                     "color": "#006664",
+                                    "height": "md",
                                     "style": "primary"
                                 },
                                 {
@@ -66,7 +66,30 @@
                                 }
                             ]
                         },
+                        "footer": {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "backgroundColor": "#006664",
+                            "borderColor": "#006664",
+                            "contents": [
+                                {
+                                    "type": "button",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "เข้าสู่เว็บไซต์",
+                                        "uri": "https://docs.google.com/forms/d/e/1FAIpQLScR9bNfq1d811MdNlfDUiAuu2ylOLa0S4L0vCEl7pFL-w9MzA/alreadyresponded"
+                                    },
+                                    "color": "#006664",
+                                    "height": "sm",
+                                    "style": "primary"
+                                }
+                            ]
+                        },
                         "styles": {
+                            "body": {
+                                "backgroundColor": "#006664",
+                                "separator": false
+                            },
                             "footer": {
                                 "backgroundColor": "#000000FF",
                                 "separatorColor": "#000000FF"
