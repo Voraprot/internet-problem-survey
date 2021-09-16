@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale,user-scalable=0,viewport-fit=cover">
+    <title>Share</title>
+</head>
+
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+        async function main() {
+            await liff.init({ liffId: "" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    altText: "Flex Message from Share Target Picker",
+                    contents: {
+                        "type": "bubble",
+                        "direction": "ltr",
+                        "hero": {
+                            "type": "image",
+                            "url": "https://sv1.picz.in.th/images/2021/09/16/CljQFP.jpg",
+                            "align": "center",
+                            "gravity": "center",
+                            "size": "full",
+                            "aspectRatio": "30.51:30",
+                            "aspectMode": "cover",
+                            "backgroundColor": "#000000FF",
+                            "action": {
+                                "type": "uri",
+                                "uri": "https://docs.google.com/forms/d/e/1FAIpQLScR9bNfq1d811MdNlfDUiAuu2ylOLa0S4L0vCEl7pFL-w9MzA/alreadyresponded"
+                            }
+                        },
+                        "footer": {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "backgroundColor": "#006664",
+                            "borderColor": "#006664",
+                            "contents": [
+                                {
+                                    "type": "button",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "ทำแบบสอบถาม",
+                                        "uri": "https://docs.google.com/forms/d/e/1FAIpQLScR9bNfq1d811MdNlfDUiAuu2ylOLa0S4L0vCEl7pFL-w9MzA/alreadyresponded"
+                                    },
+                                    "color": "#006664",
+                                    "style": "primary"
+                                },
+                                {
+                                    "type": "separator",
+                                    "color": "#00A5A2FF"
+                                },
+                                {
+                                    "type": "button",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "แชร์ให้เพื่อน",
+                                        "uri": "https://liff.line.me/1656432967-rzjlPwOq"
+                                    },
+                                    "color": "#006664",
+                                    "style": "primary"
+                                }
+                            ]
+                        },
+                        "styles": {
+                            "footer": {
+                                "backgroundColor": "#000000FF",
+                                "separatorColor": "#000000FF"
+                            }
+                        }
+                    }
+
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+
+</html>
