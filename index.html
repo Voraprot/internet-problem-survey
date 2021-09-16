@@ -11,7 +11,8 @@
 <body>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
     <script>
-        async function shareMsg() {
+        async function main() {
+            await liff.init({ liffId: "1656434427-KEeq2wko" })
             await liff.shareTargetPicker([
                 {
                     type: "flex",
@@ -76,34 +77,6 @@
                 }
             ])
             liff.closeWindow()
-        }
-        async function getUserProfile() {
-            const profile = await liff.getProfile()
-            document.getElementById("pictureUrl").src = profile.pictureUrl
-            document.getElementById("userId").append(profile.userId)
-            document.getElementById("statusMessage").append(profile.statusMessage)
-            document.getElementById("displayName").append(profile.displayName)
-            document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-        }
-
-        function getEnvironment() {
-            liff.getOS()
-            liff.getLanguage()
-            liff.getVersion()
-            liff.getAccessToken()
-            liff.isInClient()
-        }
-        async function main() {
-            await liff.init({ liffId: "1656434427-KEeq2wko" })
-            liff.isLoggedIn()
-            if (liff.isLoggedIn()) {
-                getEnvironment()
-                getUserProfile()
-                getContext()
-                shareMsg()
-            } else {
-                liff.login()
-            }
         }
         main()
     </script>
